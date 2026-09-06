@@ -309,14 +309,14 @@ namespace tp_tonton
         {
 
         }
-        private void ChargerFournisseurs()
+        private void ChargerFournisseurs(string order = "ASC")
         {
             try
             {
                 Database database = new Database();
                 using (var connexion = database.GetConnection())
                 {
-                    string query = @"Select id_fournisseur,nom , telephone , email, adresse from fournisseur;";
+                    string query = $@"Select id_fournisseur,nom , telephone , email, adresse from fournisseur order by nom {order} ;";
                     using (var command = new MySqlCommand(query, connexion))
                     {
                         using (var adapter = new MySqlDataAdapter(command))
@@ -377,7 +377,6 @@ namespace tp_tonton
             }
             DataGridViewRow ligne = dgvFournisseurs.Rows[e.RowIndex];
             idFournisseurSelectionne = Convert.ToInt32(ligne.Cells["id_fournisseur"].Value);
-            txtNomArticle.Text = ligne.Cells["nom"].Value?.ToString() ?? "";
             txtEmailFournisseur.Text = ligne.Cells["email"].Value?.ToString() ?? "";
             txtTelephoneFournisseur.Text = ligne.Cells["telephone"].Value?.ToString() ?? "";
             txtNomFournisseur.Text = ligne.Cells["nom"].Value?.ToString() ?? "";
@@ -463,7 +462,7 @@ namespace tp_tonton
                     string query = @"delete from fournisseur where id_fournisseur = @idfournisseur;";
                     using (var command = new MySqlCommand(query, connexion))
                     {
-                        command.Parameters.AddWithValue("@idfournisseur ", idFournisseurSelectionne);
+                        command.Parameters.AddWithValue("@idfournisseur", idFournisseurSelectionne);
                         connexion.Open();
                         command.ExecuteNonQuery();
                     }
@@ -477,6 +476,16 @@ namespace tp_tonton
             {
                 MessageBox.Show("Erreur lors de la supprime du fournisseur : " + ex.Message);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ChargerFournisseurs("ASC");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ChargerFournisseurs("DESC");
         }
     }
 }

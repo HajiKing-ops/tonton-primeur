@@ -47,6 +47,8 @@
             label1 = new Label();
             dgvArticles = new DataGridView();
             tabPage2 = new TabPage();
+            button4 = new Button();
+            button3 = new Button();
             txtAdresseFournisseur = new TextBox();
             txtEmailFournisseur = new TextBox();
             txtTelephoneFournisseur = new TextBox();
@@ -263,6 +265,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(button4);
+            tabPage2.Controls.Add(button3);
             tabPage2.Controls.Add(txtAdresseFournisseur);
             tabPage2.Controls.Add(txtEmailFournisseur);
             tabPage2.Controls.Add(txtTelephoneFournisseur);
@@ -283,6 +287,26 @@
             tabPage2.Text = "Fournisseurs";
             tabPage2.UseVisualStyleBackColor = true;
             tabPage2.Click += tabPage2_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(113, 0);
+            button4.Name = "button4";
+            button4.Size = new Size(99, 29);
+            button4.TabIndex = 16;
+            button4.Text = "Trier Z -> A";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(8, 0);
+            button3.Name = "button3";
+            button3.Size = new Size(99, 29);
+            button3.TabIndex = 15;
+            button3.Text = "Trier A -> Z";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // txtAdresseFournisseur
             // 
@@ -384,7 +408,7 @@
             dgvFournisseurs.AllowUserToAddRows = false;
             dgvFournisseurs.AllowUserToDeleteRows = false;
             dgvFournisseurs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFournisseurs.Location = new Point(8, 23);
+            dgvFournisseurs.Location = new Point(3, 35);
             dgvFournisseurs.MultiSelect = false;
             dgvFournisseurs.Name = "dgvFournisseurs";
             dgvFournisseurs.ReadOnly = true;
@@ -449,5 +473,7 @@
         private TextBox txtEmailFournisseur;
         private TextBox txtTelephoneFournisseur;
         private TextBox txtNomFournisseur;
+        private Button button4;
+        private Button button3;
     }
 }
