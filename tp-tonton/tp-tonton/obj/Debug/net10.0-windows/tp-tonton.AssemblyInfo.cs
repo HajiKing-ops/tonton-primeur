@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tp-tonton")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e55c0968f0513282a62cd0848a7c57c2c34d9e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("tp-tonton")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tp-tonton")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tp-tonton\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|c:\\users\\utilisateur\\desktop\\tonton\\tp-tonton\\tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|solutionrelative:tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tp-tonton\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|c:\\users\\utilisateur\\desktop\\tonton\\tp-tonton\\tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|solutionrelative:tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
+              "Title": "Form1.cs [Conception]",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs",
               "RelativeDocumentMoniker": "tp-tonton\\Form1.cs",
-              "ToolTip": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs [Design]",
-              "RelativeToolTip": "tp-tonton\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs [Conception]*",
+              "RelativeToolTip": "tp-tonton\\Form1.cs [Conception]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-06T13:09:48.031Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Conception]"
             },
             {
               "$type": "Document",
@@ -38,11 +38,12 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs",
               "RelativeDocumentMoniker": "tp-tonton\\Form1.cs",
-              "ToolTip": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs",
-              "RelativeToolTip": "tp-tonton\\Form1.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs*",
+              "RelativeToolTip": "tp-tonton\\Form1.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-06T13:05:24.535Z"
+              "WhenOpened": "2026-09-06T13:05:24.535Z",
+              "EditorCaption": ""
             }
           ]
         }
