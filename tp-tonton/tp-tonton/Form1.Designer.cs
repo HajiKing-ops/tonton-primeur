@@ -131,6 +131,7 @@
             btnSupprimerArticle.TabIndex = 13;
             btnSupprimerArticle.Text = "Supprimer";
             btnSupprimerArticle.UseVisualStyleBackColor = true;
+            btnSupprimerArticle.Click += btnSupprimerArticle_Click;
             // 
             // btnModifierArticle
             // 

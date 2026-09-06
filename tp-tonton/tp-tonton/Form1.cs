@@ -10,7 +10,7 @@ namespace tp_tonton
         {
             InitializeComponent();
             ChargerArticle();
-            ChargerFournisseurDansComboBox();
+            ChargerFournisseurDansCoboBox();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace tp_tonton
             }
         }
 
-        private void ChargerFournisseurDansComboBox()
+        private void ChargerFournisseurDansCoboBox()
         {
             try
             {
@@ -164,6 +164,9 @@ namespace tp_tonton
                         MessageBox.Show("done");
                     }
                 }
+                ChargerArticle();
+                MessageBox.Show("succés");
+
             }
             catch (Exception ex)
             {
@@ -178,6 +181,59 @@ namespace tp_tonton
 
         private void btnModifierArticle_Click(object sender, EventArgs e)
         {
+            if (idAritcleSelectionne == 0)
+            {
+                MessageBox.Show("Veuillez selectionner un article a modifier");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtNomArticle.Text))
+            {
+                MessageBox.Show("Veuillez saisir le nom de l'article");
+                return;
+            }
+            if (cboTypeArticle.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez selectionner un Type");
+                return;
+            }
+            if (numPrix.Value <= 0)
+            {
+                MessageBox.Show("Veuillez saisir le prix");
+                return;
+            }
+            if (cboFournisseur.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez selectionner un fournisseur");
+                return;
+            }
+
+            try
+            {
+                Database database = new Database();
+                using (var connexion = database.GetConnection())
+                {
+                    string query = @"update article set nom = @nom, type = @type, prix_unitaire = @prix , quantite_stock = @quantite, id_fournisseur = @idFournisseur where id_article = @idAritcle ;";
+                    using (var command = new MySqlCommand(query, connexion))
+                    {
+                        command.Parameters.AddWithValue("@nom", txtNomArticle.Text.Trim());
+                        command.Parameters.AddWithValue("@type", cboTypeArticle.SelectedItem.ToString());
+                        command.Parameters.AddWithValue("@prix", numPrix.Value);
+                        command.Parameters.AddWithValue("@quantite", Convert.ToInt32(numQuantite.Value));
+                        command.Parameters.AddWithValue("@idFournisseur", Convert.ToInt32(cboFournisseur.SelectedValue));
+                        command.Parameters.AddWithValue("@idAritcle", idAritcleSelectionne);
+                        connexion.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                ChargerArticle();
+                MessageBox.Show("Article modifié avec succés");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de la modification de l'articles : " + ex.Message);
+            }
 
         }
 
@@ -196,6 +252,56 @@ namespace tp_tonton
             numPrix.Value = Convert.ToDecimal(ligne.Cells["prix_unitaire"].Value);
             numQuantite.Value = Convert.ToDecimal(ligne.Cells["quantite_stock"].Value);
             cboFournisseur.SelectedValue = ligne.Cells["id_fournisseur"].Value;
+        }
+
+        private void btnSupprimerArticle_Click(object sender, EventArgs e)
+        {
+            if (idAritcleSelectionne == 0)
+            {
+                MessageBox.Show("Veuillez selectionner un article a modifier");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtNomArticle.Text))
+            {
+                MessageBox.Show("Veuillez saisir le nom de l'article");
+                return;
+            }
+            if (cboTypeArticle.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez selectionner un Type");
+                return;
+            }
+            if (numPrix.Value <= 0)
+            {
+                MessageBox.Show("Veuillez saisir le prix");
+                return;
+            }
+            if (cboFournisseur.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez selectionner un fournisseur");
+                return;
+            }
+
+            try { 
+               Database database = new Database();
+                using (var connexion = database.GetConnection())
+                {
+                    string query = @"delete from article where id_article = @idArticle;";
+                    using (var command = new MySqlCommand(query, connexion))
+                    {
+                        command.Parameters.AddWithValue("@idArticle", idAritcleSelectionne);
+                        connexion.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                ChargerArticle();
+                MessageBox.Show("l'article est supprime");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de la supprime de l'articles : " + ex.Message);
+            }
+
         }
     }
 }
