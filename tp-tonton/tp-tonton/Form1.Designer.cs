@@ -256,6 +256,7 @@
             dgvArticles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvArticles.Size = new Size(839, 204);
             dgvArticles.TabIndex = 0;
+            dgvArticles.CellClick += dgvArticles_CellClick;
             // 
             // tabPage2
             // 

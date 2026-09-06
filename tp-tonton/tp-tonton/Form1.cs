@@ -5,6 +5,7 @@ namespace tp_tonton
 {
     public partial class Form1 : Form
     {
+        private int idAritcleSelectionne = 0;
         public Form1()
         {
             InitializeComponent();
@@ -66,6 +67,7 @@ namespace tp_tonton
                 {
                     string query = @"Select
                                 a.id_article,
+                                a.id_fournisseur,
                                 a.nom as nom_article,
                                 a.type,
                                 a.prix_unitaire,
@@ -177,6 +179,23 @@ namespace tp_tonton
         private void btnModifierArticle_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void dgvArticles_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            DataGridViewRow ligne = dgvArticles.Rows[e.RowIndex];
+            idAritcleSelectionne = Convert.ToInt32(ligne.Cells["id_article"].Value);
+            txtNomArticle.Text = ligne.Cells["nom_article"].Value?.ToString() ?? "";
+            cboTypeArticle.SelectedItem = ligne.Cells["type"].Value?.ToString();
+            numPrix.Value = Convert.ToDecimal(ligne.Cells["prix_unitaire"].Value);
+            numQuantite.Value = Convert.ToDecimal(ligne.Cells["quantite_stock"].Value);
+            cboFournisseur.SelectedValue = ligne.Cells["id_fournisseur"].Value;
         }
     }
 }
