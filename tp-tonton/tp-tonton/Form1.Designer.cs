@@ -113,6 +113,7 @@
             button2.TabIndex = 15;
             button2.Text = "Trier Z -> A";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -122,6 +123,7 @@
             button1.TabIndex = 14;
             button1.Text = "Trier A -> Z";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnSupprimerArticle
             // 
@@ -312,12 +314,13 @@
             // 
             // btnModifierFournisseur
             // 
-            btnModifierFournisseur.Location = new Point(392, 319);
+            btnModifierFournisseur.Location = new Point(392, 320);
             btnModifierFournisseur.Name = "btnModifierFournisseur";
             btnModifierFournisseur.Size = new Size(94, 29);
             btnModifierFournisseur.TabIndex = 7;
             btnModifierFournisseur.Text = "Modifier";
             btnModifierFournisseur.UseVisualStyleBackColor = true;
+            btnModifierFournisseur.Click += btnModifierFournisseur_Click;
             // 
             // btnSupprimerFournisseur
             // 
@@ -327,7 +330,7 @@
             btnSupprimerFournisseur.TabIndex = 6;
             btnSupprimerFournisseur.Text = "Supprimer";
             btnSupprimerFournisseur.UseVisualStyleBackColor = true;
-            btnSupprimerFournisseur.Click += button4_Click;
+            btnSupprimerFournisseur.Click += btnSupprimerFournisseur_Click;
             // 
             // btnAjouterFournisseur
             // 
@@ -337,6 +340,8 @@
             btnAjouterFournisseur.TabIndex = 5;
             btnAjouterFournisseur.Text = "Ajouter";
             btnAjouterFournisseur.UseVisualStyleBackColor = true;
+            btnAjouterFournisseur.Click += btnAjouterFournisseur_Click;
+            btnAjouterFournisseur.KeyDown += btnAjouterFournisseur_KeyDown;
             // 
             // label8
             // 
@@ -387,6 +392,8 @@
             dgvFournisseurs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFournisseurs.Size = new Size(829, 218);
             dgvFournisseurs.TabIndex = 0;
+            dgvFournisseurs.CellClick += dgvFournisseurs_CellClick;
+            dgvFournisseurs.CellContentClick += dgvFournisseurs_CellContentClick;
             // 
             // Form1
             // 
