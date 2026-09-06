@@ -1,0 +1,16 @@
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\bin\Debug\net10.0-windows\tp-tonton.exe
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\bin\Debug\net10.0-windows\tp-tonton.deps.json
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\bin\Debug\net10.0-windows\tp-tonton.runtimeconfig.json
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\bin\Debug\net10.0-windows\tp-tonton.dll
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\bin\Debug\net10.0-windows\tp-tonton.pdb
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp_tonton.Form1.resources
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.csproj.GenerateResource.cache
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.AssemblyInfoInputs.cache
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.AssemblyInfo.cs
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.dll
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\refint\tp-tonton.dll
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.pdb
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\tp-tonton.genruntimeconfig.cache
+C:\Users\Utilisateur\source\repos\tp-tonton\tp-tonton\obj\Debug\net10.0-windows\ref\tp-tonton.dll
