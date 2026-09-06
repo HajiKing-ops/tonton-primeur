@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|c:\\users\\utilisateur\\desktop\\tonton\\tp-tonton\\tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|solutionrelative:tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|c:\\users\\utilisateur\\desktop\\tonton\\tp-tonton\\tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|solutionrelative:tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|c:\\users\\utilisateur\\desktop\\tonton\\tp-tonton\\tp-tonton\\data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|solutionrelative:tp-tonton\\data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|c:\\users\\utilisateur\\desktop\\tonton\\tp-tonton\\tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D0D9DBD1-5CC5-2DFE-7850-C08E9EF230A3}|tp-tonton\\tp-tonton.csproj|solutionrelative:tp-tonton\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Data\\Database.cs",
+              "RelativeDocumentMoniker": "tp-tonton\\Data\\Database.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Data\\Database.cs",
+              "RelativeToolTip": "tp-tonton\\Data\\Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T15:01:20.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Conception]",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs",
               "RelativeDocumentMoniker": "tp-tonton\\Form1.cs",
@@ -34,13 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs",
               "RelativeDocumentMoniker": "tp-tonton\\Form1.cs",
               "ToolTip": "C:\\Users\\Utilisateur\\Desktop\\tonton\\tp-tonton\\tp-tonton\\Form1.cs",
               "RelativeToolTip": "tp-tonton\\Form1.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-06T13:05:24.535Z",
               "EditorCaption": ""
