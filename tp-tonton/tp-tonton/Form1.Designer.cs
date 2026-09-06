@@ -37,10 +37,10 @@
             btnAjouterArticle = new Button();
             cboFournisseur = new ComboBox();
             label4 = new Label();
-            numericUpDown2 = new NumericUpDown();
+            numQuantite = new NumericUpDown();
             label3 = new Label();
             label2 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            numPrix = new NumericUpDown();
             cboTypeArticle = new ComboBox();
             Type = new Label();
             txtNomArticle = new TextBox();
@@ -61,8 +61,8 @@
             dgvFournisseurs = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numQuantite).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numPrix).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvArticles).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFournisseurs).BeginInit();
@@ -88,10 +88,10 @@
             tabPage1.Controls.Add(btnAjouterArticle);
             tabPage1.Controls.Add(cboFournisseur);
             tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(numericUpDown2);
+            tabPage1.Controls.Add(numQuantite);
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(numericUpDown1);
+            tabPage1.Controls.Add(numPrix);
             tabPage1.Controls.Add(cboTypeArticle);
             tabPage1.Controls.Add(Type);
             tabPage1.Controls.Add(txtNomArticle);
@@ -140,6 +140,7 @@
             btnModifierArticle.TabIndex = 12;
             btnModifierArticle.Text = "Modifier";
             btnModifierArticle.UseVisualStyleBackColor = true;
+            btnModifierArticle.Click += btnModifierArticle_Click;
             // 
             // btnAjouterArticle
             // 
@@ -149,6 +150,7 @@
             btnAjouterArticle.TabIndex = 11;
             btnAjouterArticle.Text = "Ajouter";
             btnAjouterArticle.UseVisualStyleBackColor = true;
+            btnAjouterArticle.Click += btnAjouterArticle_Click;
             // 
             // cboFournisseur
             // 
@@ -168,13 +170,13 @@
             label4.TabIndex = 9;
             label4.Text = "Fournisseur";
             // 
-            // numericUpDown2
+            // numQuantite
             // 
-            numericUpDown2.Location = new Point(138, 363);
-            numericUpDown2.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(150, 27);
-            numericUpDown2.TabIndex = 8;
+            numQuantite.Location = new Point(138, 363);
+            numQuantite.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            numQuantite.Name = "numQuantite";
+            numQuantite.Size = new Size(150, 27);
+            numQuantite.TabIndex = 8;
             // 
             // label3
             // 
@@ -194,15 +196,16 @@
             label2.TabIndex = 6;
             label2.Text = "Prix unitaire ($)";
             // 
-            // numericUpDown1
+            // numPrix
             // 
-            numericUpDown1.DecimalPlaces = 2;
-            numericUpDown1.Increment = new decimal(new int[] { 10, 0, 0, 131072 });
-            numericUpDown1.Location = new Point(138, 330);
-            numericUpDown1.Maximum = new decimal(new int[] { 999999, 0, 0, 131072 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(150, 27);
-            numericUpDown1.TabIndex = 5;
+            numPrix.DecimalPlaces = 2;
+            numPrix.Increment = new decimal(new int[] { 10, 0, 0, 131072 });
+            numPrix.Location = new Point(138, 330);
+            numPrix.Maximum = new decimal(new int[] { 999999, 0, 0, 131072 });
+            numPrix.Name = "numPrix";
+            numPrix.Size = new Size(150, 27);
+            numPrix.TabIndex = 5;
+            numPrix.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // cboTypeArticle
             // 
@@ -395,8 +398,8 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numQuantite).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numPrix).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvArticles).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
@@ -416,8 +419,8 @@
         private Label Type;
         private Label label3;
         private Label label2;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown numPrix;
+        private NumericUpDown numQuantite;
         private ComboBox cboFournisseur;
         private Label label4;
         private Button btnSupprimerArticle;

@@ -1,6 +1,5 @@
 using tp_tonton.Data;
 using MySqlConnector;
-using tp_tonton.Data;
 using System.Data;
 namespace tp_tonton
 {
@@ -10,6 +9,7 @@ namespace tp_tonton
         {
             InitializeComponent();
             ChargerArticle();
+            ChargerFournisseurDansComboBox();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace tp_tonton
             {
                 MessageBox.Show("Failed" + ex.Message);
             }
-    
+
         }
 
         private void ChargerArticle()
@@ -91,5 +91,92 @@ namespace tp_tonton
             }
         }
 
+        private void ChargerFournisseurDansComboBox()
+        {
+            try
+            {
+                Database database = new Database();
+
+                using (var connexion = database.GetConnection())
+                {
+                    string query = @" Select id_fournisseur, nom  from fournisseur order by nom;";
+                    using (var command = new MySqlCommand(query, connexion))
+                    {
+                        using (var adapter = new MySqlDataAdapter(command))
+                        {
+                            DataTable table = new DataTable();
+                            connexion.Open();
+                            adapter.Fill(table);
+                            cboFournisseur.DataSource = table;
+                            cboFournisseur.DisplayMember = "nom";
+                            cboFournisseur.ValueMember = "id_fournisseur";
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors du chargement des articles : " + ex.Message);
+            }
+        }
+
+        private void btnAjouterArticle_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNomArticle.Text))
+            {
+                MessageBox.Show("Veuillez saisir le nom de l'article");
+                return;
+            }
+            if (cboTypeArticle.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez selectionner un Type");
+                return;
+            }
+            if (numPrix.Value <= 0)
+            {
+                MessageBox.Show("Veuillez saisir le prix");
+                return;
+            }
+            if (cboFournisseur.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez selectionner un fournisseur");
+                return;
+            }
+
+            try
+            {
+                Database database = new Database();
+                using (var connexion = database.GetConnection())
+                {
+                    string query = @"insert into article (nom, type, prix_unitaire, quantite_stock, id_fournisseur) values (@nom, @type, @prix, @quantite, @fournisseur);";
+                    using (var command = new MySqlCommand(query, connexion))
+                    {
+                        command.Parameters.AddWithValue("@nom", txtNomArticle.Text.Trim());
+                        command.Parameters.AddWithValue("@type", cboTypeArticle.SelectedItem.ToString());
+                        command.Parameters.AddWithValue("@prix", numPrix.Value);
+                        command.Parameters.AddWithValue("@quantite", Convert.ToInt32(numQuantite.Value));
+                        command.Parameters.AddWithValue("@fournisseur", Convert.ToInt32(cboFournisseur.SelectedValue));
+                        connexion.Open();
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("done");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors du chargement des articles : " + ex.Message);
+            }
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModifierArticle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
